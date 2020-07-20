@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('site/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/adm/CadastroOrcamento.css') }}">
-    <title> Orcamentos </title>
+    <link rel="shortcut icon" href="{{ asset('images/logo.png') }}"  width="125" height="125">
+    <title> Cadastra Mensalidades </title>
 </head>
 <body>
     <!--start navBar-->

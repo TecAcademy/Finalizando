@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('site/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/adm/HomeAdm.css') }}">
-    <title>Painel do Adimistrativo</title>
+    <link rel="shortcut icon" href="{{ asset('images/logo.png') }}"  width="125" height="125">
+    <title>Incio</title>
 </head>
 <body>
 <!--start navBar-->

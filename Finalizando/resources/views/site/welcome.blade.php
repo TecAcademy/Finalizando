@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ asset('css/Home.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('site/style.css') }}">
-    <title>Home</title>
+    <link rel="shortcut icon" href="{{ asset('images/logo.png') }}"  width="125" height="125">
+    <title>Seja Bem-Vindo!</title>
 </head>
 <body>
 <!--start navBar-->

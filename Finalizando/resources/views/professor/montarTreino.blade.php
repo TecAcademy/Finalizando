@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('site/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/professor/MontarTreino.css') }}">
-
-    <title>Criacao do treino</title>
+    <link rel="shortcut icon" href="{{ asset('images/logo.png') }}"  width="125" height="125">
+    <title>Monstar Treino do Aluno(a)</title>
 </head>
 <body>
     <!--start navBar-->

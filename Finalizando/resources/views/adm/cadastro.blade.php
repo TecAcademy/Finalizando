@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Animated Login Form</title>
+    <title>Seja Bem Vindo Administrador(a)</title>
     <link href="{{ asset('css/adm/LoginAdm.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{ asset('images/logo.png') }}"  width="125" height="125">
 </head>
 <body>
 

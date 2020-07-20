@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('site/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/adm/EdiçãoUsuario.css') }}">
-    <title>Edicao</title>
+    <title>Editar usuario</title>
 </head>
 <body>
 <!--start navBar-->

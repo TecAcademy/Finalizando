@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login & Cadastro</title>
+    <title>Login e Cadastro</title>
     <link href="{{ asset('css/Login.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/17ae136748.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="{{ asset('images/logo.png') }}"  width="125" height="125">
 </head>
 <body>
 
