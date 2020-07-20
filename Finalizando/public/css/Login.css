@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(to right, #363636 0%, #4F4F4F 100%);
+    background: linear-gradient(to right,#4169E1 0%, #87CEEB 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,7 +168,7 @@ inputs{
 .overlay {
     background: #FF416C;
     background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-    background: linear-gradient(to right,#363636 0%, #696969 100%);
+    background: linear-gradient(to right,#4169E1 0%, #87CEEB 100%);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
@@ -230,4 +230,10 @@ inputs{
     margin: 0 5px;
     height: 40px;
     width: 40px;
+}
+.errologin{
+    background-color: #F8D7DA;
+    color: black;
+    border-radius: 5%;
+
 }

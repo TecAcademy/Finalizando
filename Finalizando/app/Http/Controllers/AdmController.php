@@ -195,5 +195,4 @@ class AdmController extends Controller
             echo "erro na delecao do usuario ".$request->id;
         }
     }
-
 }
