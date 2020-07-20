@@ -79,7 +79,7 @@ class BudgetController extends Controller
         }else{
             echo "Erro de requisicao";
         }
-    
+
     }
 
 
@@ -161,7 +161,7 @@ class BudgetController extends Controller
             return redirect()->route('aluno.login')->withInput()->withErrors(['faca login !']);
         }
 
-        if($request){      
+        if($request){
             $jesusHumilhaSatanas = DB::table('budget')
                 ->where([
                     ['idusuario', '=', $request->idusuario],
@@ -183,7 +183,7 @@ class BudgetController extends Controller
 
     #Funcao que deleta o orcamento do banco de dados
     public function delBudget(Request $request){
-        
+
         #Verificando se tem uma sessao autenticada para logar
         if(!session('auth')){
             return redirect()->route('aluno.login')->withInput()->withErrors(['faca login !']);
@@ -192,7 +192,7 @@ class BudgetController extends Controller
         $sql = DB::table('budget')->where([
             ['idusuario', '=', $request->idusuario],
             ['vencimento', '=', $request->vencimento],
-            ['preco', '=', $request->preco]
+            ['preco', '=', $request->preco],
             ])
             ->delete();
 
@@ -203,4 +203,7 @@ class BudgetController extends Controller
             echo "erro na delecao do usuario ".$request->id;
         }
     }
+
 }
+
+

@@ -40,38 +40,6 @@ class AdmController extends Controller
         return redirect()->route('adm.find');
     }
 
-    #Funcao que cadastra um professor
-    public function storeProf(Request $request)
-    {
-        #Verificando se tem uma sessao autenticada para logar
-        if(!session('auth')){
-            return redirect()->route('aluno.login')->withInput()->withErrors(['faca login !']);
-        }
-
-        $user = new User();
-        $user->nome = $request->nome;
-
-        if(User::where('email', '=', $request->email)->exists()){
-            return back()->with('error', 'Ja existe esse email cadastrado!');
-        }
-        else{
-            $user->email = $request->email;
-        }
-
-        $user->password = $request->password;
-        $user->acesso = '1';
-        $user->nascimento = $request->nascimento;
-        $user->cpf = $request->cpf;
-        $user->celular = $request->celular;
-
-        $user->save();
-
-        $ts = new TrainingSheetController();
-        $ts->store($user->id, 'nenhum');
-
-        return redirect()->route('adm.principal');
-    }
-
     #Funcao que lista os usuario do banco de dados
     public function listAllUsers()
     {
