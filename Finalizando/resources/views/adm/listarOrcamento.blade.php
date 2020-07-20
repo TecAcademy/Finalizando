@@ -59,9 +59,9 @@
                 <th>Preco</th>
                 <th>Data de vencimento</th>
                 <th>Situacao</th>
-                <th>Acao 01</th>
-                <th>Acao 02</th>
-                <th>Acao 03</th>
+                <th>Confirmar Ação</th>
+                <th>Editar</th>
+                <th>Excluir</th>
             </tr>
 
             @foreach($dados as $dado)
@@ -92,7 +92,7 @@
                                 <input type="hidden" name="preco" value="{{ $dado->preco }}">
                                 <input type="hidden" name="vencimento" value="{{ $dado->vencimento }}">
                                 <input type="hidden" name="idusuario" value="{{ $dado->id }}">
-                                <button class="btn btn-outline-success" type="submit">Editar</button>
+                                <button class="btn btn-outline-success" type="submit"><i class="fab fa-wpforms"></i></button>
                             </form>
                         </td>
                     @else
@@ -108,7 +108,7 @@
                             <input type="hidden" name="idusuario" value="{{ $dado->id }}">
                             <input type="hidden" name="preco" value="{{ $dado->preco }}">
                             <input type="hidden" name="vencimento" value="{{ $dado->vencimento }}">
-                            <button class="btn btn-outline-success" type="submit">excluir</button>
+                            <button class="btn btn-outline-success" type="submit"><i class="fas fa-trash"></i></button>
                         </form>
                     </td>
                     @else
@@ -120,6 +120,7 @@
         </table>
         <br>
         </div>
+        <script src="https://kit.fontawesome.com/17ae136748.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

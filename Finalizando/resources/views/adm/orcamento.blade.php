@@ -53,8 +53,8 @@
         <h3>Entenda as cada botões e suas funções, assim evitando dores de cabeças
             futuras facilitando seu entendimento sobre o sistema!</h3>
        <center><br>
-            <a href="{{ route('adm.orcamento.cadastro') }}"><button class=" btn btn-outline-primary btn-lg ">Cadastra aluno e sua mensalidade </button></a><br><br><br>
-            <a href="{{ route('adm.orcamento.listar') }}"><button class=" btn btn-outline-primary btn-lg"> Listar pagamento feitos </button></a>
+            <a href="{{ route('adm.orcamento.cadastro') }}"><button class=" btn btn-outline-success btn-lg ">Cadastra aluno e sua mensalidade </button></a><br><br><br>
+            <a href="{{ route('adm.orcamento.listar') }}"><button class=" btn btn-outline-success btn-lg"> Listar pagamento feitos </button></a>
        </center>
         </div>
     <br>
