@@ -1,0 +1,28 @@
+body{
+    height: 100vh;
+    background: #363636	;
+    color: white;
+
+}
+.container{
+    background-color: #343A40;
+
+}
+.container{
+    background-color: #343A40;
+
+}
+.label-form{
+    width:200px ;
+}
+.input-form{
+    width:200px ;
+    height: 40px;
+}
+.input-cargo{
+    height: 20px;
+    width: 20px;
+}
+.cargo-text{
+    font-size: 15px;
+}

@@ -1,0 +1,10 @@
+body{
+    height: 100vh;
+    background: #363636	;
+    color: white;
+
+}
+.container{
+    background-color: #343A40;
+    align-items: center;
+}

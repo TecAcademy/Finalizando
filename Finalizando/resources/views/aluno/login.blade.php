@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SignUp and Login</title>
-    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <title>Login & Cadastro</title>
+    <link href="{{ asset('css/Login.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/17ae136748.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -43,8 +43,6 @@
                 </div>
 
             @endif
-
-
             <span>Entre na sua conta!</span>
             <input placeholder="E-mail" type="email" name="email" id="email">
             <input placeholder="Senha" type="password" name="password" id="password">

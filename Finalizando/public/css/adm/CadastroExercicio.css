@@ -1,0 +1,22 @@
+body{
+    height: 100vh;
+    background: #363636	;
+    color: white;
+}
+
+.container{
+    background-color: #343A40;
+    height: 500px;
+    width: 500px;
+}
+.lista{
+    height:30px ;
+    width:80px ;
+}
+.label-form{
+   height: 45px;
+}
+.form-input{
+    height:40px;
+}
+

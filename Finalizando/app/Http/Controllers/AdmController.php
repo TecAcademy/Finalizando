@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\PhysicalExercise;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -156,6 +157,75 @@ class AdmController extends Controller
             return redirect()->back()->withInput()->withErrors(["Erro de edicao!"]);
         }
 
+    }
+
+    #Funcao que lista os exercicios do banco de dados
+    public function listExercises()
+    {
+        $exe = PhysicalExercise::all();
+
+        return view('adm.listarExercicios', [
+            'exercicios' => $exe
+        ]);
+    }
+
+    #Funcao que retorna a view de edicao do exercicio
+    public function viewEditingExe($exe)
+    {
+        //dd($exe);
+
+        $query = DB::table('physicalexercises')
+            ->where('id', '=', $exe)
+            ->first();
+
+        return view('adm.edicaoExercicio', [
+            'exercicio' => $query
+        ]);
+    }
+
+    #Funcao que faz a edicao de fato dos exercicios
+    public function editExe(Request $request){
+        #Verificando se tem uma sessao autenticada para logar
+        if(!session('auth')){
+            return redirect()->route('aluno.login')->withInput()->withErrors(['faca login !']);
+        }
+
+
+        if($request){
+
+            DB::table('physicalexercises')
+                ->where('id', $request->exe)
+                ->update([
+                    'nome' => $request->nome,
+                    'areamuscular' => $request->area,
+                    'aparelho' => $request->aparelho,
+                    'letra' => $request->letra
+                ]);
+
+            return redirect()->route('adm.listar.exercicios');
+        }
+        else{
+            return redirect()->back()->withInput()->withErrors(["Erro de edicao!"]);
+        }
+
+    }
+
+    #Funcao que deleta o exercicio do bd
+    public function delExe(Request $request)
+    {
+        #Verificando se tem uma sessao autenticada para logar
+        if(!session('auth')){
+            return redirect()->route('aluno.login')->withInput()->withErrors(['faca login !']);
+        }
+
+        $sql = DB::table('physicalexercises')->where('id', '=', $request->id)->delete();
+
+        if($sql){
+            return redirect()->route('adm.listar.exercicios');
+        }
+        else {
+            echo "erro na delecao do usuario ".$request->id;
+        }
     }
 
 }

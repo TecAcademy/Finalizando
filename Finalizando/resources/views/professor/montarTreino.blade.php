@@ -6,45 +6,91 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('site/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/professor/MontarTreino.css') }}">
+
     <title>Criacao do treino</title>
 </head>
 <body>
-    <h2>{{ session('nome') }}, aqui voce monta o treino do  {{ $user->nome }}</h2>
-
-    <table border="2">
+    <!--start navBar-->
+    <nav class="navbar navbar-expand-lg navbar  navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Tec Academy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ route('professor.homepage') }}">inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('professor.homepage.listarAlunos', session('nome')) }}">Listar alunos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('professor.homepage.escolher') }}">Selecionar Aluno(a)</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('prof.homepage.logout') }}">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--Fim navBar-->
+    <br>
+    <center><h2>Montar o treino do(a)  {{ $user->nome }}</h2></center>
+    @if($errors->all())
+        <div>
+            @foreach($errors->all() as $error)
+                <h5>{{$error}}</h5>
+            @endforeach
+        </div>
+    @endif
+    <br>
+    <div class="container">
+        <br>
+    <table class="table table-hover table-dark">
         <tr>
             <th>Nome</th>
             <th>Marcar</th>
             <th>Serie</th>
-            <th>Repeticao</th>
+            <th>Repetição</th>
             <th>Intervalo (em segundos)</th>
-            <th>Obs</th>
+            <th>Observações</th>
         </tr>
-
         <form action="{{ route('prof.homepage.montarTreino.realizar') }}" method="post">
             @csrf
             <input type="hidden" name='id' value={{ $user->id }}>
             @foreach($exercicios as $value)
                 <tr>
                     <td>{{$value->nome}}</td>
-                    <td><input type="checkbox" name="caixas[]" id="caixas[]" value="{{$value->id}}">
+                    <td><input class="box" type="checkbox" name="caixas[]" id="caixas[]" value="{{$value->id}}">
                         <input type="hidden" name="invisivel[]" id="invisivel[]" value="{{$value->id}}">
                     </td>
-                    <td><input type="number" name="serie[]" id="serie[]" value="0"></td>
-                    <td><input type="number" name="repeticao[]" id="repeticao[]" value="0"></td>
-                    <td><input type="number" name="intervalo[]" id="intervalo[]" value="0"></td>
-                    <td><input type="text" name="obs[]" id="obs[]" placeholder="observacoes" value="..."></td>
+                    <td><input type="number" name="serie[]" id="serie[]" placeholder="0"></td>
+                    <td><input type="number" name="repeticao[]" id="repeticao[]" placeholder="0"></td>
+                    <td><input type="number" name="intervalo[]" id="intervalo[]" placeholder="0"></td>
+                    <td><input type="text" name="obs[]" id="obs[]" placeholder="observacoes" value="Sem nenhuma observação!"></td>
                 </tr>
         @endforeach
     </table>
-    <button type="submit">Salvar</button>
+    <br>
+    </div>
+    <br>
+    <h5>
+        A duração desse treino sera valida até: <input  class="inputdate" type="date" name="dataTroca" id="dataTroca" required>
+        <button class="btn btn-success btn-lg" type="submit">Salvar</button>
+    </h5>
+    <br>
+    <center><p style="font-size: 24px" class=" btn btn-danger">
+        Data de hoje: {{ date('d-m-Y') }}
+    </p>
+    </center>
+    <br><br>
     </form>
 
-    <br>
-    <br>
-    <a href="{{ route('professor.homepage.listarAlunos', session('nome')) }}"> <button><---</button> </a>
 
-    <script src="{{ asset('site/bootstrap.js') }}"></script>
-    <script src="{{ asset('site/jquery.js') }}"></script>
+
+
+<script src="{{ asset('site/bootstrap.js') }}"></script>
+<script src="{{ asset('site/jquery.js') }}"></script>
 </body>
 </html>

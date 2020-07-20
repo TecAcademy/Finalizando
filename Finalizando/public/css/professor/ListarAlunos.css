@@ -1,0 +1,26 @@
+
+body{
+    height: 100vh;
+    background: #363636	;
+    color: white;
+}
+
+
+.container{
+    background-color: #343A40;
+
+}
+.lista{
+    height:30px ;
+}
+.label-form{
+    height: 25px;
+}
+.lista{
+    height:30px ;
+    width:120px ;
+}
+.input{
+    height:39px ;
+    width:140px ;
+}

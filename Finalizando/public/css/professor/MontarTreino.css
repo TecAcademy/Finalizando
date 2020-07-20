@@ -1,0 +1,41 @@
+body{
+    background: #363636	;
+    color: white;
+
+}
+.box{
+    height:40px ;
+    width:40px ;
+
+}
+.inputdate{
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+}
+button{
+    height: 10%;
+    width: 10%;
+    cursor: pointer;
+}
+input{
+    cursor: pointer;
+}
+.container{
+    background-color: #343A40;
+
+}
+.lista{
+    height:30px ;
+}
+.label-form{
+    height: 25px;
+}
+.lista{
+    height:30px ;
+    width:120px ;
+}
+.input{
+    height:39px ;
+    width:140px ;
+}

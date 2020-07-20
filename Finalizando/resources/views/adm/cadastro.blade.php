@@ -2,12 +2,14 @@
 <html>
 <head>
     <title>Animated Login Form</title>
-    <link href="{{ asset('css/loginadm.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/adm/LoginAdm.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
+<!--Fim navBar-->
 <img class="wave" src="{{URL::asset('/images/backloginadm.png')}}">
 <div class="container">
     <div class="img">

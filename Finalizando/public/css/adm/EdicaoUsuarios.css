@@ -1,0 +1,26 @@
+body{
+    height: 100vh;
+    background: #363636	;
+    color: white;
+}
+.container{
+    background-color: #343A40;
+    display: flex;
+    align-items: center;
+}
+
+.label-form{
+    height:50px ;
+    width:200px ;
+}
+.input-form{
+    height:40px ;
+    width:300px ;
+}
+.input-cargo{
+    height: 20px;
+    width: 20px;
+}
+.cargo-text{
+    font-size: 15px;
+}

@@ -35,7 +35,7 @@ class ProfController extends Controller
 
         return view('professor.escolherAluno', [
             'users' => $users,
-            ]);
+        ]);
     }
 
     #Este metodo faz o logout (destruindo todas as sessoes atuais)

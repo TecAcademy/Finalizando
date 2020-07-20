@@ -19,10 +19,6 @@ class CreateUsersTable extends Migration
             $table->string('email')->default('email@dominio')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
-            $table->enum('acesso',['0','1', '2'])->default('0');
-            $table->date('nascimento')->nullable();
-            $table->string('cpf',11)->default('00000000000');
-            $table->string('celular', 11)->default('00000000000')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
