@@ -11,41 +11,41 @@
     <title>Criacao do treino</title>
 </head>
 <body>
-    <!--start navBar-->
-    <nav class="navbar navbar-expand-lg navbar  navbar-dark bg-dark">
-        <a class="navbar-brand" href="{{ route('professor.homepage') }}"> <img src="{{URL::asset('/images/logo.png' )}}" width="60" height="60">Tec Academy</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('professor.homepage.listarAlunos', session('nome')) }}">Listar alunos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('professor.homepage.escolher') }}">Selecionar Aluno(a)</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('prof.homepage.logout') }}">Logout</a>
-                </li>
-            </ul>
-        </div>
-        <a class="navbar-brand"><img src="{{URL::asset('/images/usuario.png' )}}" width="60" height="60"></a>
-        <a class="navbar-brand">{{ session('nome') }}<br>{{ session('email') }}</a>
-    </nav>
-    <!--Fim navBar-->
+<!--start navBar-->
+<nav class="navbar navbar-expand-lg navbar  navbar-dark bg-dark">
+    <a class="navbar-brand" href="{{ route('professor.homepage') }}"> <img src="{{URL::asset('/images/logo.png' )}}" width="60" height="60">Tec Academy</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('professor.homepage.listarAlunos', session('nome')) }}">Listar alunos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('professor.homepage.escolher') }}">Selecionar Aluno(a)</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('prof.homepage.logout') }}">Logout</a>
+            </li>
+        </ul>
+    </div>
+    <a class="navbar-brand"><img src="{{URL::asset('/images/usuario.png' )}}" width="60" height="60"></a>
+    <a class="navbar-brand">{{ session('nome') }}<br>{{ session('email') }}</a>
+</nav>
+<!--Fim navBar-->
+<br>
+<center><h2>Montar o treino do(a)  {{ $user->nome }}</h2></center>
+@if($errors->all())
+    <div>
+        @foreach($errors->all() as $error)
+            <h5>{{$error}}</h5>
+        @endforeach
+    </div>
+@endif
+<br>
+<div class="container">
     <br>
-    <center><h2>Montar o treino do(a)  {{ $user->nome }}</h2></center>
-    @if($errors->all())
-        <div>
-            @foreach($errors->all() as $error)
-                <h5>{{$error}}</h5>
-            @endforeach
-        </div>
-    @endif
-    <br>
-    <div class="container">
-        <br>
     <table class="table table-hover table-dark">
         <tr>
             <th>Nome</th>
@@ -72,19 +72,19 @@
         @endforeach
     </table>
     <br>
-    </div>
-    <br>
-    <h5>
-        A duração desse treino sera valida até: <input  class="inputdate" type="date" name="dataTroca" id="dataTroca" required>
-        <button class="btn btn-success btn-lg" type="submit">Salvar</button>
-    </h5>
-    <br>
-    <center><p style="font-size: 24px" class=" btn btn-danger">
+</div>
+<br>
+<h5>
+    A duração desse treino sera valida até: <input  class="inputdate" type="date" name="dataTroca" id="dataTroca" required>
+    <button class="btn btn-success btn-lg" type="submit">Salvar</button>
+</h5>
+<br>
+<center><p style="font-size: 24px" class=" btn btn-danger">
         Data de hoje: {{ date('d-m-Y') }}
     </p>
-    </center>
-    <br><br>
-    </form>
+</center>
+<br><br>
+</form>
 
 
 
