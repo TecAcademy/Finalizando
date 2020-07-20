@@ -42,21 +42,22 @@
         <tr>
             <th> Nome </th>
             <th> E-mail </th>
-            <th> Funções </th>
-            <th> Funções </th>
+            <th> Editar </th>
+            <th> Visualizar treino do Aluno(a)</th>
         </tr>
         @foreach($alunos as $aluno)
 
             <tr>
                 <td>{{ $aluno->nome }}</td>
                 <td>{{ $aluno->email }}</td>
-                <td><a href="{{ route('prof.homepage.montarTreino', $aluno->id) }}"><button class=" btn btn-outline-success"> Montar Treino do aluno(a) </button></a></td>
-                <td><a href="{{ route('prof.homepage.mostrarTreino', $aluno->id) }}"><button class="btn btn-outline-success"> Visualizar o Treino Atual do aluno(a) </button></a></td>
+                <td><a href="{{ route('prof.homepage.montarTreino', $aluno->id) }}"><button class=" btn btn-outline-success"><i class="fab fa-wpforms"></i></button></a></td>
+                <td><a href="{{ route('prof.homepage.mostrarTreino', $aluno->id) }}"><button class="btn btn-outline-success"><i class="far fa-eye"></i></button></a></td>
             </tr>
         @endforeach
     </table>
         <br>
     </div>
+    <script src="https://kit.fontawesome.com/17ae136748.js" crossorigin="anonymous"></script>
     <script src="{{ asset('site/bootstrap.js') }}"></script>
     <script src="{{ asset('site/jquery.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
