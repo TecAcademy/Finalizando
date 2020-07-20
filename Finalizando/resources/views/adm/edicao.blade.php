@@ -75,17 +75,18 @@
             <br>
             <h4>Mudar Cargo do Usuario</h4>
             <br>
-            <!--MEXI COMENTA DEPOIS FILHA DA PUTA!-->
+            <!--Limitando a visão (corretamente)!-->
             @if($user->acesso == '0')
-                 <input class="radio" type="radio" name="acesso" id="acesso" value="1"> Professor
-                <input class="radio" type="radio" name="acesso" id="acesso" value="2"> Adm
+                 <input class="radio" type="radio" name="acesso" id="acesso" value="1" checked> Professor
+                <input class="radio" type="radio" name="acesso" id="acesso" value="2" > Adm
             @elseif($user->acesso == '1')
-                <input class="radio" type="radio" name="acesso" id="acesso" value="0"> Aluno
+                <input class="radio" type="radio" name="acesso" id="acesso" value="0" checked> Aluno
                 <input class="radio" type="radio" name="acesso" id="acesso" value="2"> Adm
             @elseif($user->acesso == '2')
-                <input class="radio" type="radio" name="acesso" id="acesso" value="0"> Aluno
+                <input class="radio" type="radio" name="acesso" id="acesso" value="0" checked> Aluno
                 <input class="radio" type="radio" name="acesso" id="acesso" value="1"> Professor
             @endif
+
             <br>
             <br>
         <button class="btn btn-success btn-lg" type="submit"> confirmar edicao </button>

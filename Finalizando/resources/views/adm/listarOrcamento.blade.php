@@ -78,6 +78,8 @@
                             <form action="{{route('adm.orcamento.pagar')}}" method="post">
                                 @csrf
                                 <input type="hidden" name="idusuario" value="{{ $dado->id }}">
+                                <input type="hidden" name="preco" value="{{$dado->preco}}">
+                                <input type="hidden" name="vencimento" value="{{$dado->vencimento}}">
                                 <button class="btn btn-outline-success" type="submit">Efetuar pagamento</button>
                             </form>
                         </td>

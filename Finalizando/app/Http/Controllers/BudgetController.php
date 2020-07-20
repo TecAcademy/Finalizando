@@ -18,9 +18,9 @@ class BudgetController extends Controller
         #Pegando data de hoje
         $dataAtual = date('Y-m-d');
 
-     if(strtotime($request->vencimento) < strtotime($dataAtual)){
-        return redirect()->back()->withInput()->withErrors(['A data de vencimento nao pode ser anterior ao dia de hoje!']);
-    }
+        if(strtotime($request->vencimento) < strtotime($dataAtual)){
+            return redirect()->back()->withInput()->withErrors(['A data de vencimento nao pode ser anterior ao dia de hoje!']);
+        }
 
         $users = DB::table('users')
             ->where('acesso', '=', '0')
@@ -68,13 +68,17 @@ class BudgetController extends Controller
             #Pegando data de hoje
             $dataAtual = date('Y-m-d');
 
-        $ant_man = DB::table('budget')
-        ->where('idusuario', '=', $request->idusuario)
-        ->update([
-            'situacao' => 'pago',
-            'dataPagamento' => $dataAtual
-        ]);
-        return redirect()->route('adm.orcamento.listar');
+            $ant_man = DB::table('budget')
+                ->where([
+                    ['idusuario', '=', $request->idusuario],
+                    ['preco', '=', $request->preco],
+                    ['vencimento', '=', $request->vencimento]
+                ])
+                ->update([
+                    'situacao' => 'pago',
+                    'dataPagamento' => $dataAtual
+                ]);
+            return redirect()->route('adm.orcamento.listar');
 
         }else{
             echo "Erro de requisicao";
@@ -96,11 +100,11 @@ class BudgetController extends Controller
                 ->join('users', 'budget.idusuario', '=', 'users.id')
                 ->select(
                     'users.id',
-                            'users.nome',
-                            'users.email',
-                            'budget.preco',
-                            'budget.vencimento',
-                            'budget.situacao'
+                    'users.nome',
+                    'users.email',
+                    'budget.preco',
+                    'budget.vencimento',
+                    'budget.situacao'
                 )
                 ->orderBy('vencimento')
                 ->where('situacao', '=', 'pendente')
@@ -124,20 +128,21 @@ class BudgetController extends Controller
             ->join('users', 'budget.idusuario', '=', 'users.id')
             ->select(
                 'users.id',
-                        'users.nome',
-                        'users.email',
-                        'budget.preco',
-                        'budget.dataPagamento',
-                        'budget.vencimento',
-                        'budget.situacao'
+                'users.nome',
+                'users.email',
+                'budget.preco',
+                'budget.dataPagamento',
+                'budget.vencimento',
+                'budget.situacao',
+                'budget.idusuario'
             )
-            ->orderBy('vencimento')
+            ->orderBy('nome')
             ->where('situacao', '=', 'pago')
             ->get();
 
-            return view('adm.listarOrcamentosPagos', [
-                'dados' => $spider_man
-            ]);
+        return view('adm.listarOrcamentosPagos', [
+            'dados' => $spider_man
+        ]);
     }
 
     #Funcao que traz view para editar o orcamento
@@ -167,7 +172,7 @@ class BudgetController extends Controller
                     ['idusuario', '=', $request->idusuario],
                     ['vencimento', '=', $request->velhovencimento],
                     ['preco', '=', $request->velhopreco]
-                    ])
+                ])
                 ->update([
                     'preco' => $request->novopreco,
                     'vencimento' => $request->novovencimento
@@ -192,8 +197,8 @@ class BudgetController extends Controller
         $sql = DB::table('budget')->where([
             ['idusuario', '=', $request->idusuario],
             ['vencimento', '=', $request->vencimento],
-            ['preco', '=', $request->preco],
-            ])
+            ['preco', '=', $request->preco]
+        ])
             ->delete();
 
         if($sql){
@@ -204,6 +209,29 @@ class BudgetController extends Controller
         }
     }
 
+    #Funcao que deleta os orcamentos pagos
+    public function delPaydBudget(Request $request){
+        #Verificando se tem uma sessao autenticada para logar
+        if(!session('auth')){
+            return redirect()->route('aluno.login')->withInput()->withErrors(['faca login !']);
+        }
+
+
+        $hulk = DB::table('budget')
+            ->where([
+                ['idusuario', '=', $request->idusuario],
+                ['preco', '=', $request->preco],
+                ['vencimento', '=', $request->vencimento],
+                ['dataPagamento', '=', $request->dataPagamento],
+                ['situacao', '=', 'pago']
+            ])
+            ->delete();
+
+        if($hulk){
+            return redirect()->route('adm.orcamento.listar.pagos')->withInput()->withErrors(['Deletado!']);
+        }
+        else{
+            return redirect()->route('adm.orcamento.listar.pagos')->withInput()->withErrors(['Erro ao deletar o pagamento!']);
+        }
+    }
 }
-
-

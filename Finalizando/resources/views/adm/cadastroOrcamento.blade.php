@@ -60,7 +60,7 @@
                 <br>
                     <input class="input-form" type="date" name="vencimento" id="vencimento" required> <br><br>
                 <label class="label-form" type="input-form">Valor</label><br>
-                    <input class="input-form" type="number" name="preco" id="preco" step="any" min="0" required>
+                    <input class="input-form" type="number" name="preco" id="preco" step="any" min="0" max="4000" required>
                 <br><br>
                 <button class="btn btn-outline-primary btn-lg" type="submit">usuario</button>
                </center>

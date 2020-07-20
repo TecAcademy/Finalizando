@@ -111,11 +111,14 @@ Route::put('/adm/listar/edicao/orcamento/realizar', 'BudgetController@editBudget
 Route::delete('adm/edicao/orcamento/deletar', 'BudgetController@delBudget')
     ->name('adm.edicao.orcamento.deletar');
 
+Route::delete('/adm/orcamento/pagos/deletar', 'BudgetController@delPaydBudget')
+    ->name('adm.orcamento.pagos.deletar');
+
 Route::post('adm/orcamento/pagar', 'BudgetController@pay')
-->name('adm.orcamento.pagar');
+    ->name('adm.orcamento.pagar');
 
 Route::post('/adm/orcamento/cadastro/usuario/realizar', 'BudgetController@storeBudget')
-->name('adm.orcamento.cadastro.realizar');
+    ->name('adm.orcamento.cadastro.realizar');
 
 
 Route::post('/adm/orcamento/cadastro/usuario', 'BudgetController@viewPopUp')

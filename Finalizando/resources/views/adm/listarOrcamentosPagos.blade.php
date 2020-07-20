@@ -67,8 +67,17 @@
                 <td>{{ date('d-m-Y',strtotime($dado->dataPagamento))}}</td>
                 <td>{{ date('d-m-Y', strtotime($dado->vencimento))}}</td>
                 <td>{{$dado->situacao}}</td>
-
-                <td><Button class="btn btn-outline-primary "><i class="fas fa-trash"></i></Button></td>
+                <td>
+                    <form action="{{route('adm.orcamento.pagos.deletar')}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <input type="hidden" name="preco" value="{{$dado->preco}}">
+                        <input type="hidden" name="vencimento" value="{{$dado->vencimento}}">
+                        <input type="hidden" name="dataPagamento" value="{{$dado->dataPagamento}}">
+                        <input type="hidden" name="idusuario" value="{{$dado->idusuario}}">
+                        <Button class="btn btn-outline-success" type="submit"><i class="fas fa-trash"></i></Button>
+                    </form>
+                </td>
             </tr>
         @endforeach
     </table>
