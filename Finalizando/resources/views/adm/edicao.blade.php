@@ -83,8 +83,9 @@
                 <input class="radio" type="radio" name="acesso" id="acesso" value="0" checked> Aluno
                 <input class="radio" type="radio" name="acesso" id="acesso" value="2"> Adm
             @elseif($user->acesso == '2')
-                <input class="radio" type="radio" name="acesso" id="acesso" value="0" checked> Aluno
+                <input class="radio" type="radio" name="acesso" id="acesso" value="0"> Aluno
                 <input class="radio" type="radio" name="acesso" id="acesso" value="1"> Professor
+                <input class="radio" type="radio" name="acesso" id="acesso" value="2" checked> Adm
             @endif
 
             <br>
