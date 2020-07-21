@@ -48,13 +48,13 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="{{URL::asset('/images/caro2.png' )}}">
+            <img src="{{URL::asset('/images/Caro02.png' )}}">
         </div>
         <div class="carousel-item">
-            <img src="{{URL::asset('/images/caro1.png' )}}">
+            <img src="{{URL::asset('/images/caro03.png' )}}">
         </div>
         <div class="carousel-item">
-            <img src="{{URL::asset('/images/caro.png' )}}">
+            <img src="{{URL::asset('/images/Caro01.png' )}}">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

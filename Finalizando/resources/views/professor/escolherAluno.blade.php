@@ -20,6 +20,9 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('professor.homepage') }}">Inicio</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('professor.homepage.listarAlunos', session('nome')) }}">Listar alunos</a>
                 </li>
                 <li class="nav-item">

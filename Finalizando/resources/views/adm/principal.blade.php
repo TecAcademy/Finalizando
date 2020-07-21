@@ -44,10 +44,41 @@
     </nav>
     <!--Fim navBar-->
     <br>
-    <center><h3> Painel Administrativo! </h3></center>
+    <center><h2 style="color: #555555"> Painel Administrativo! </h2></center>
     <br><br>
-    <h4>Nome do usuario {{ session('nome') }}</h4>
-    <h4>E-mail usado para a sessão {{ session('email') }}</h4>
+    <div class="container">
+        <div class="right">
+            <center>
+                <p class="texto"><br>
+                Olá <strong><span style="font-size: 26px; color:black">{{ session('nome') }}</span></strong><br>
+                <img  src="{{URL::asset('/images/logo.png' )}}"><br>
+                   Tec Academy &#169;
+                </p>
+            </center>
+        </div>
+        <div class="left">
+            <center>
+                  <br>
+                  <h1>Esse site é para você, dono de Academias quer ter um diferencial?!</h1><br>
+                  <p class="texto">
+                        Vamos tornar sua experiencia cada vez melhor, juntos!
+                        Nossa sitema tenta ajuda o maximo possivel com o maior conforto possivel
+                        com um design simples e elegante para seu melhor desempenho. <br>
+                        Um complemento para o seu negocio e o diferencial do seu negocio para os demais.
+                        <br><br>
+                            <p class="dese">Desenvolvedores: Mathues Araújo & Eduardo Araújo &#169;</p>
+
+
+                  </p>
+            </center>
+        </div>
+    </div>
+
+
+
+
+
+
     <script src="{{ asset('site/bootstrap.js') }}"></script>
     <script src="{{ asset('site/jquery.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
