@@ -42,7 +42,7 @@
                         @foreach($errors->all() as $error)
                             <div class="errologin">
                                <strong>Senha ou E-mail inválido,
-                               corriga e tente novamente!</strong>
+                               corrija e tente novamente!</strong>
                             </div>
                         @endforeach
                     </div>

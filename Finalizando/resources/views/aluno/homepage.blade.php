@@ -36,29 +36,33 @@
     <!--Fim navBar-->
     <br><br><br>
     <div class="container">
-        <div class="div-right">
+        <div class="right">
+            <center>
+                <p class="texto"><br>
+                    Olá <strong><span style="font-size: 26px; color:black">{{ session('nome') }}</span></strong><br>
+                    <img  src="{{URL::asset('/images/logo.png' )}}"><br>
+                    Tec Academy &#169;
+                </p>
+            </center>
+        </div>
+        <div class="left">
+            <center>
+                <br>
+                <h1>Como Funciona o nosso sistema?!</h1><br>
+                <p class="texto">
+                    Os professores avaliam sua situação montam um treino com base no que você deseja fazer,
+                    Hipertrofia, Emagrecer, Aerobico... <br>
+                    Visando sempre seu melhor estar dentro do ambiente, em caso de troca de professor(a) informe
+                    o mesmo para que posso requisitar a troca.<br>
+                    Seus Treino serão lançados e atualizados por aqui, seu treino será mudado com o passar do tempo
+                    <br><br>
+                <p class="dese">Desenvolvedores: Mathues Araújo & Eduardo Araújo &#169;</p>
 
+
+                </p>
+            </center>
+        </div>
     </div>
-    <div class="container">
-        <div class="div-right">
-            <center><strong><h1>Olá seja Bem-Vindo, <span style="color: #993333">{{ session('nome') }}!</span></h1></strong></center>
-            <p class="text">Olá, caso seja sua primeira vez usando o nosso sitemas, pedimos por gentileza
-                que leia este texto. <br>
-                Usando a barra de navegação é possivel que você consulte seu treino e veja qual será o treino
-                de hoje</p>
-            <center><strong><h1>Como Funciona o nosso sistema?!</h1></strong></center>
-            <p class="text">Os professores avaliam sua situação montam um treino com base no que você deseja fazer,
-            Hipertrofia, Emagrecer, Aerobico...
-            Visando sempre seu melhor estar dentro do ambiente, em caso de troca de professor(a) informe
-            o mesmo para que posso requisitar a troca.<br>
-            Seus Treino serão lançados e atualizados por aqui, seu treino será mudado com o passar do tempo</p>
-        </div>
-      </div>
-    <br><br>
-            <center><strong><h1>Como Funciona o nosso sistema?!</h1></strong></center>
-                <p class="text"></p>
-            </div>
-        </div>
         <script src="{{ asset('site/bootstrap.js') }}"></script>
         <script src="{{ asset('site/jquery.js') }}"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -37,8 +37,34 @@
         <a class="navbar-brand">{{ session('nome') }}<br>{{ session('email') }}</a>
     </nav>
     <!--Fim navBar-->
-    <h1>Seja bem-vindo intrutor(a) {{ session('nome') }}!</h1>
+    <br><br>
+    <div class="container">
+        <div class="right">
+            <center>
+                <p class="texto"><br>
+                    Olá <strong><span style="font-size: 26px; color:black">{{ session('nome') }}</span></strong><br>
+                    <img  src="{{URL::asset('/images/logo.png' )}}"><br>
+                    Tec Academy &#169;
+                </p>
+            </center>
+        </div>
+        <div class="left">
+            <center>
+                <br>
+                <h1>Seja bem-vindo intrutor(a) {{ session('nome') }}!</h1><br>
+                <p class="texto">
+                    Olá {{ session('nome') }}, navegando no nosso sitemas e possível observar que existem algumas opções,
+                    você podera selecionar o aluno(a) desejado, de acordo com seu horario de trabalho dentro da academia,
+                    assim tendo um melhor controle sobre seus alunos.<br>
+                    Também é possivel montar o treino dos alunos e auxilialos com observações em relação ao mesmo.
+                    <br><br>
+                <p class="dese">Desenvolvedores: Mathues Araújo & Eduardo Araújo &#169;</p>
 
+
+                </p>
+            </center>
+        </div>
+    </div>
 
     <script src="{{ asset('site/bootstrap.js') }}"></script>
     <script src="{{ asset('site/jquery.js') }}"></script>

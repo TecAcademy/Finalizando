@@ -11,9 +11,28 @@ body{
 
 .container{
     background-color: #343A40;
-
 }
 
 .text{
  font-size: 25px;
 }
+.container{
+    background-color: #b9bbbe;
+    display: flex;
+}
+.right{
+    background-color: #343A40;
+    color: black;
+}
+.left{
+    color: black;
+}
+.texto{
+    font-size: 26px;
+    color: black;
+}
+.dese{
+    font-size:14px ;
+    color: black;
+}
+
