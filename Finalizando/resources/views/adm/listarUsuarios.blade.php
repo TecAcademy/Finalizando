@@ -20,6 +20,9 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item">
+                <a class="nav-link" href="{{ route('adm.principal') }}">Inicio</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="{{ route('adm.orcamento') }}">Mensalidade</a>
             </li>
             <li class="nav-item">
@@ -50,7 +53,7 @@
             <br>
         <table class="table table-hover table-dark"  border="0.9">
             <tr>
-                <th scope="col">#</th>
+                <th scope="col">ID</th>
                 <th>Nome</th>
                 <th>E-mail</th>
                 <th>Cargo</th>

@@ -49,7 +49,7 @@
     <br>
     <table class="table table-hover table-dark" >
         <tr>
-            <th>#</th>
+            <th>ID</th>
             <th>Usuario</th>
             <th>E-mail</th>
             <th>Preço</th>

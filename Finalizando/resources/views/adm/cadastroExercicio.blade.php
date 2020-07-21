@@ -19,6 +19,9 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item">
+                <a class="nav-link" href="{{ route('adm.principal') }}">Inicio</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="{{ route('adm.orcamento') }}">Mensalidade</a>
             </li>
             <li class="nav-item">

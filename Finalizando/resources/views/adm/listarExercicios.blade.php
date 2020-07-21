@@ -49,11 +49,11 @@
         <br>
     <table class="table table-hover table-dark">
         <tr>
-            <th> # </th>
-            <th> Nome </th>
-            <th> Area muscular </th>
-            <th> Aparelho </th>
-            <th> Letra </th>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Area muscular</th>
+            <th>Aparelho</th>
+            <th>Letra</th>
             <th>Editar Usuario</th>
             <th>Excluir Usuario</th>
         </tr>
