@@ -6,16 +6,9 @@ body{
 }
 .container{
     background-color: #343A40;
-    align-items: center;
+    height:560px ;
+    width:530px ;
 }
-.container{
-    background-color: #343A40;
-    display: flex;
-    align-items: center;
-    height: 500px;
-    width:400px ;
-}
-
 .label-form{
     height:20px ;
     font-size: 20px;

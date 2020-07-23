@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('site/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/adm/Orcamento.css') }}">
     <link rel="shortcut icon" href="{{ asset('images/logo.png') }}"  width="125" height="125">
@@ -45,26 +45,31 @@
         <a class="navbar-brand">{{ session('nome') }}<br>{{ session('email') }}</a>
     </nav>
     <!--Fim navBar-->
-
-    <br>
-    <center><h3>Listar e Cadastrar Mensilidade de Aluno(a)</h3></center>
-    <br>
-    <div class="container">
-        <div>
-        <h3>Entenda as cada botões e suas funções, assim evitando dores de cabeças
-            futuras facilitando seu entendimento sobre o sistema!</h3>
-       <center><br>
-            <a href="{{ route('adm.orcamento.cadastro') }}"><button class=" btn btn-outline-success btn-lg ">Cadastra aluno e sua mensalidade </button></a><br><br><br>
-            <a href="{{ route('adm.orcamento.listar') }}"><button class=" btn btn-outline-success btn-lg"> Listar pagamento feitos </button></a>
-       </center>
+    <br><br>
+    <center><h1>Ações Possiveis!</h1></center>
+    <br><br><br>
+        <div class="container">
+            <div class="container">
+                <center> <h1>Cadastro</h1>
+                    <img src="{{URL::asset('/images/iconeformularios.png' )}}" width="100" height="100" style="border-radius: 50px"><br><br>
+                    <a href="{{ route('adm.orcamento.cadastro') }}"><button  type="button" class="btn btn-success btn-lg" data-toggle="tooltip" data-placement="top"
+                    type="submit" title="Cadastrar pagamento dos alunos!">Cadastro</button></a></center>
+            </div>
+            <div class="container">
+                <center> <h1>Status do Pagamento</h1>
+                    <img src="{{URL::asset('/images/pagamento.png' )}}" width="100" height="100" style="border-radius: 50px"><br><br>
+                    <a href="{{ route('adm.orcamento.listar') }}"><button  type="button" class="btn btn-success btn-lg" data-toggle="tooltip" data-placement="top"
+                    type="submit" title="Observar o status dos pagamentos!">Visualizar</button></a></center>
+                </div>
+            <div class="container">
+                <center> <h1>Pago</h1>
+                    <img src="{{URL::asset('/images/pagoicone.png' )}}" width="100" height="100" style="border-radius: 50px"><br><br>
+                    <a href="{{ route('adm.orcamento.listar.pagos') }}"><button  type="button" class="btn btn-success btn-lg" data-toggle="tooltip" data-placement="top"
+                    type="submit" title="Pagamentos feitos, observar limite da data!">Concluidos</button></a></center>
+            </div>
         </div>
-    <br>
-    </div>
-    </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>

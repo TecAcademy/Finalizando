@@ -49,25 +49,25 @@
     <br>
     <table class="table table-hover table-dark" >
         <tr>
-            <th>ID</th>
-            <th>Usuario</th>
-            <th>E-mail</th>
-            <th>Preço</th>
-            <th>Data do Pagamento</th>
-            <th>Data de Vencimento</th>
-            <th>Situação</th>
-            <th>Excluir</th>
+            <th><center>ID</center></th>
+            <th><center>Usuario</center></th>
+            <th><center>E-mail</center></th>
+            <th><center>Valor</center></th>
+            <th><center>Data do pagamento</center></th>
+            <th><center>Vencimento Mensalidade</center></th>
+            <th><center>Situação</center></th>
+            <th><center>Excluir</center></th>
         </tr>
 
         @foreach($dados as $dado)
             <tr>
-                <td>{{$dado->id}}</td>
-                <td>{{$dado->nome}}</td>
-                <td>{{$dado->email}}</td>
-                <td>{{$dado->preco}}</td>
-                <td>{{ date('d-m-Y',strtotime($dado->dataPagamento))}}</td>
-                <td>{{ date('d-m-Y', strtotime($dado->vencimento))}}</td>
-                <td>{{$dado->situacao}}</td>
+                <td><center>{{$dado->id}}</center></td>
+                <td><center>{{$dado->nome}}</center></td>
+                <td><center>{{$dado->email}}</center></td>
+                <td><center>{{$dado->preco}}</center></td>
+                <td><center>{{ date('d-m-Y',strtotime($dado->dataPagamento))}}</center></td>
+                <td><center>{{ date('d-m-Y', strtotime($dado->vencimento))}}</center></td>
+                <td><center>{{$dado->situacao}}</center></td>
                 <td>
                     <form action="{{route('adm.orcamento.pagos.deletar')}}" method="post">
                         @csrf
@@ -76,7 +76,7 @@
                         <input type="hidden" name="vencimento" value="{{$dado->vencimento}}">
                         <input type="hidden" name="dataPagamento" value="{{$dado->dataPagamento}}">
                         <input type="hidden" name="idusuario" value="{{$dado->idusuario}}">
-                        <Button class="btn btn-outline-success" type="submit"><i class="fas fa-trash"></i></Button>
+                        <center><Button class="btn btn-outline-success" type="submit"><i class="fas fa-trash"></i></Button></center>
                     </form>
                 </td>
             </tr>

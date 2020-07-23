@@ -48,31 +48,30 @@
         <br>
 
         <center>
-            <a href="{{ route('adm.orcamento.listar.pagos') }}"><button  class=" btn btn-success btn-lg">Mensalidades Pagas</button></a><br><br>
         </center>
         <div class="container">
             <br>
         <table class="table table-hover table-dark">
             <tr>
-                <th>ID</th>
-                <th>Usuario</th>
-                <th>Email</th>
-                <th>Preco</th>
-                <th>Data de vencimento</th>
-                <th>Situacao</th>
-                <th>Confirmar Ação</th>
-                <th>Editar</th>
-                <th>Excluir</th>
+                <th><center>ID</center></th>
+                <th><center>Usuario</center></th>
+                <th><center>Email</center></th>
+                <th><center>Preço</center></th>
+                <th><center>Data de vencimento</center></th>
+                <th><center>Situação</center></th>
+                <th><center>Confirmar Ação</center></th>
+                <th><center>Editar</center></th>
+                <th><center>Excluir</center></th>
             </tr>
 
             @foreach($dados as $dado)
                 <tr>
-                    <td>{{$dado->id}}</td>
-                    <td>{{$dado->nome}}</td>
-                    <td>{{$dado->email}}</td>
-                    <td>{{$dado->preco}}</td>
-                    <td>{{ date('d-m-Y', strtotime($dado->vencimento))}}</td>
-                    <td>{{$dado->situacao}}</td>
+                    <td><center>{{$dado->id}}</center></td>
+                    <td><center>{{$dado->nome}}</center></td>
+                    <td><center>{{$dado->email}}</center></td>
+                    <td><center>{{$dado->preco}}</center></td>
+                    <td><center>{{ date('d-m-Y', strtotime($dado->vencimento))}}</center></td>
+                    <td><center>{{$dado->situacao}}</center></td>
 
                     @if($dado->situacao == 'pendente')
                         <td>
@@ -81,7 +80,7 @@
                                 <input type="hidden" name="idusuario" value="{{ $dado->id }}">
                                 <input type="hidden" name="preco" value="{{$dado->preco}}">
                                 <input type="hidden" name="vencimento" value="{{$dado->vencimento}}">
-                                <button class="btn btn-outline-success" type="submit">Efetuar pagamento</button>
+                                <center><button class="btn btn-outline-success" type="submit">Pagamento Confirmado</button></center>
                             </form>
                         </td>
                     @else
@@ -95,7 +94,7 @@
                                 <input type="hidden" name="preco" value="{{ $dado->preco }}">
                                 <input type="hidden" name="vencimento" value="{{ $dado->vencimento }}">
                                 <input type="hidden" name="idusuario" value="{{ $dado->id }}">
-                                <button class="btn btn-outline-success" type="submit"><i class="fab fa-wpforms"></i></button>
+                                <center> <button class="btn btn-outline-success" type="submit"><i class="fab fa-wpforms"></i></button></center>
                             </form>
                         </td>
                     @else
@@ -111,7 +110,7 @@
                             <input type="hidden" name="idusuario" value="{{ $dado->id }}">
                             <input type="hidden" name="preco" value="{{ $dado->preco }}">
                             <input type="hidden" name="vencimento" value="{{ $dado->vencimento }}">
-                            <button class="btn btn-outline-success" type="submit"><i class="fas fa-trash"></i></button>
+                            <center><button class="btn btn-outline-success" type="submit"><i class="fas fa-trash"></i></button></center>
                         </form>
                     </td>
                     @else

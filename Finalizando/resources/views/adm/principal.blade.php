@@ -59,12 +59,12 @@
         <div class="left">
             <center>
                   <br>
-                  <h1>Esse site é para você, dono de Academias quer ter um diferencial?!</h1><br>
+                  <h1>Esse site é para você, dono de Academia quer ter um diferencial?!</h1><br>
                   <p class="texto">
-                        Vamos tornar sua experiencia cada vez melhor, juntos!
-                        Nossa sitema tenta ajuda o maximo possivel com o maior conforto possivel
+                        Vamos tornar sua experiencia cada vez melhor juntos!
+                        Nossa sitema tenta ajuda o maximo possível com o maior conforto
                         com um design simples e elegante para seu melhor desempenho. <br>
-                        Um complemento para o seu negocio e o diferencial do seu negocio para os demais.
+                        Um complemento para o seu negócio, e um destaque dentre os outros!
                         <br><br>
                             <p class="dese">Desenvolvedores: Mathues Araújo & Eduardo Araújo &#169;</p>
 

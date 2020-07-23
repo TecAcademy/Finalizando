@@ -6,8 +6,8 @@ body{
 
 .container{
     background-color: #343A40;
-    height: 500px;
-    width: 500px;
+    height:550px;
+    width:500px;
 }
 .lista{
     height:30px ;
@@ -19,4 +19,7 @@ body{
 .form-input{
     height:40px;
 }
-
+.title{
+    background-color: white;
+    color: black;
+}

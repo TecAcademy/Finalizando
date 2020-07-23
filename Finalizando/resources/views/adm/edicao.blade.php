@@ -42,60 +42,121 @@
     <a class="navbar-brand">{{ session('nome') }}<br>{{ session('email') }}</a>
 </nav>
 <!--Fim navBar-->
+<br>
     <center><h1>Edição Usuario</h1></center>
-
-   <center><h4> Preencha de acordo com sua escolha deste usuario!</h4></center>
-
-
-    <!--  route('users.edit.do', ['user' => $user])  -->
+    <br>
     <div class="container">
-    <form action="{{ route('adm.listar.deletar.realizar', ['user' => $user]) }}" method="post">
-        <center><br>
-        @csrf
-        @method('PUT')
-
-        @if($errors->all())
-            @foreach($errors->all() as $error)
-                {{$error}}
-            @endforeach
-        @endif
-
-            <label class="label-form" for="">Nome</label><br>
-            <input class="input-form"  type="text" name="nome" id="nome" value="{{ $user->nome }}" required><br><br>
-            <label class="label-form" for="">E-mail</label><br>
-            <input class="input-form"  type="email" name="email" id="email" value="{{ $user->email }}" required><br><br>
-            <label class="label-form" for="">Senha</label><br>
-            <input class="input-form"  type="password" name="password" id="password" placeholder="digite uma nova senha"><br><br>
-            <label class="label-form" for="">Nascimento</label><br>
-            <input class="input-form"  type="date" name="nascimento" id="nascimento" value="{{ $user->nascimento }}"><br><br>
-            <label class="label-form" for="">Cpf</label><br>
-            <input class="input-form"  type="text" name="cpf" id="cpf" required maxlength="11" value="{{ $user->cpf }}"><br><br>
-            <label class="label-form" for="">Celular</label><br>
-            <input class="input-form"  type="text" name="celular" id="celular" required maxlength="11" value="{{ $user->celular }}"><br><br>
-            <br>
-            <h4>Mudar Cargo do Usuario</h4>
-            <br>
-            <!--Limitando a visão (corretamente)!-->
-            @if($user->acesso == '0')
-                 <input class="radio" type="radio" name="acesso" id="acesso" value="1" checked> Professor
-                <input class="radio" type="radio" name="acesso" id="acesso" value="2" > Adm
-            @elseif($user->acesso == '1')
-                <input class="radio" type="radio" name="acesso" id="acesso" value="0" checked> Aluno
-                <input class="radio" type="radio" name="acesso" id="acesso" value="2"> Adm
-            @elseif($user->acesso == '2')
-                <input class="radio" type="radio" name="acesso" id="acesso" value="0"> Aluno
-                <input class="radio" type="radio" name="acesso" id="acesso" value="1"> Professor
-                <input class="radio" type="radio" name="acesso" id="acesso" value="2" checked> Adm
-            @endif
-
-            <br>
-            <br>
-        <button class="btn btn-success btn-lg" type="submit"> confirmar edicao </button>
-        </center>
+        <br>
+        <h2>Usuario selecionado para edição</h2>
+        <center><a><img src="{{URL::asset('/images/usuario.png' )}}" width="200" height="200"></a></center>
+        <center><h2><span style="color: black">{{ $user->nome }}</span></h2></center>
         <br><br>
-    </form>
+        <form action="{{ route('adm.listar.deletar.realizar', ['user' => $user]) }}" method="post" class="needs-validation" novalidate>
+            @csrf
+            @method('PUT')
+
+            @if($errors->all())
+                @foreach($errors->all() as $error)
+                    {{$error}}
+                @endforeach
+            @endif
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">Nome</label>
+                    <input type="text" class="form-control" id="validationTooltip03" name="nome" id="nome" value="{{ $user->nome }}" required>
+                    <div class="invalid-tooltip">
+                        Preencha Corretamente.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">E-mail</label>
+                    <input type="text" class="form-control" id="validationTooltip03" name="email" id="email" value="{{ $user->email }}" required>
+                    <div class="invalid-tooltip">
+                        Preencha Corretamente.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">Senha</label>
+                    <input type="text" class="form-control" id="validationTooltip03" name="password" id="password" placeholder="digite uma nova senha">
+                    <div class="invalid-tooltip">
+                        Preencha Corretamente.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">Data de nascimento</label>
+                    <input type="date" class="form-control" id="validationTooltip03" name="nascimento" id="nascimento" value="{{ $user->nascimento }}">
+                    <div class="invalid-tooltip">
+                        Preencha Corretamente.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">Cpf</label>
+                    <input type="text" class="form-control" id="validationTooltip03"  name="cpf" id="cpf" required maxlength="11" value="{{ $user->cpf }}" required>
+                    <div class="invalid-tooltip">
+                        Preencha Corretamente.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">Celular</label>
+                    <input type="text" class="form-control" id="validationTooltip03" name="celular" id="celular" required maxlength="11" value="{{ $user->celular }}" required>
+                    <div class="invalid-tooltip">
+                        Preencha Corretamente.
+                    </div>
+                </div>
+            </div>
+            <div class="check-box">
+                <div class="alert alert-danger" role="alert">
+                <strong>
+                    <center>
+                        <h6>Caso não haja necessidade de alteração no nivel de acesso, simplesmente finalize ação</h6>
+                        <h2>Selecione com atenção!</h2>
+                    <label class="check">Mudar cargo:</label>
+                    @if($user->acesso == '2' )
+                        <input type="radio" name="acesso" id="acesso" value="0"> <label class="check">Aluno</label>
+                        <input type="radio" name="acesso" id="acesso" value="1"><label class="check">Professor</label>
+                        <input type="radio" name="acesso" id="acesso" value="2" checked><label class="check">Adimistrador</label>
+                    @elseif($user->acesso == '1' )
+                        <input type="radio" name="acesso" id="acesso" value="0"><label class="check">Aluno</label>
+                        <input type="radio" name="acesso" id="acesso" value="1" checked><label class="check">Professor</label>
+                        <input type="radio" name="acesso" id="acesso" value="2"><label class="check">Adimistrador</label>
+                    @else
+                        <input type="radio" name="acesso" id="acesso" value="0"checked><label class="check">Aluno</label>
+                        <input type="radio" name="acesso" id="acesso" value="1"><label class="check">Professor</label>
+                        <input type="radio" name="acesso" id="acesso" value="2"><label class="check">Adimistrador</label>
+                    @endif
+                </strong></center>
+                </div>
+            </div>
+            <br><br>
+            <center><button class="btn btn-success btn-lg" type="submit" >Finalizar edição</button></center>
+        </form>
+
     </div>
 <br>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

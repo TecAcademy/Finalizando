@@ -53,50 +53,50 @@
             <br>
         <table class="table table-hover table-dark"  border="0.9">
             <tr>
-                <th scope="col">ID</th>
-                <th>Nome</th>
-                <th>E-mail</th>
-                <th>Cargo</th>
-                <th>Data de Nascimento</th>
-                <th>Cpf</th>
-                <th>Celular</th>
-                <th><strong>Edição</strong></th>
-                <th><strong>Excluir</strong></th>
+                <th scope="col"><center>ID</center></th>
+                <th><center>Nome</center></th>
+                <th><center>E-mail</center></th>
+                <th><center>Cargo</center></th>
+                <th><center>Data de Nascimento!</center></th>
+                <th><center>Cpf</center></th>
+                <th><center>Celular</center></th>
+                <th><strong><center>Edição</center></strong></th>
+                <th><strong><center>Excluir</center></strong></th>
             </tr>
             @foreach($users as $value)
                 @if($value->acesso != 2 || 2 ) <!-- Alterando nivel acesso 16-07-2020-->
                     <tr>
-                        <td scope="row"> {{ $value->id }} </td>
-                        <td> {{ $value->nome }} </td>
+                        <td scope="row"><center> {{ $value->id }}</center> </td>
+                        <td><center>{{ $value->nome }}</center> </td>
                         <td> {{ $value->email }} </td>
                         @if($value->acesso == '0')
-                            <td style="color: #0174DF; "><strong>Aluno</strong></td>
+                            <td style="color: #0174DF; "><strong><center>Aluno</center></strong></td>
                         @elseif($value->acesso == '1')
-                            <td style="color: #01DFA5"><strong> Professor</strong> </td>
+                            <td style="color: #01DFA5"><strong><center> Professor</center></strong> </td>
                         @else
-                            <td style="color: #000000"><strong> Administrador</strong> </td>
+                            <td style="color: #000000"><strong><center> Administrador</center></strong> </td>
                         @endif
 
                         @if($value->nascimento == '')
-                            <td>00-00-0000</td>
+                            <td><center>00-00-0000</center></td>
                         @else
-                            <td>{{date('d-m-Y', strtotime($value->nascimento))}}</td>
+                            <td><center>{{date('d-m-Y', strtotime($value->nascimento))}}</center></td>
                         @endif
 
                         @if($value->cpf == '')
-                            <td>000.000.000.00</td>
+                            <td><center>000.000.000.00</center></td>
                         @else
-                            <td>{{$value->cpf}}</td>
+                            <td><center>{{$value->cpf}}</center></td>
                         @endif
 
                         @if($value->celular == '')
-                            <td>(00)000000000</td>
+                            <td><center>(00)000000000</center></td>
                         @else
-                            <td>{{$value->celular}}</td>
+                            <td><center>{{$value->celular}}</center></td>
                         @endif
 
                         <td>
-                            <a href="{{ route('adm.listar.edicao', $value) }}"><button class="btn btn-outline-success"><i class="fab fa-wpforms"></i></button></a>
+                            <center> <a href="{{ route('adm.listar.edicao', $value) }}"><button class="btn btn-outline-success"><i class="fab fa-wpforms"></i></button></a></center>
                         </td>
 
                         <td>
@@ -105,7 +105,7 @@
                                 @csrf
 
                                 <input type="hidden" name="id" value="{{ $value->id }}">
-                                <button class="btn btn-outline-success" type="submit"> <i class="fas fa-trash"></i> </button>
+                                <center><button class="btn btn-outline-success" type="submit"> <i class="fas fa-trash"></i> </button></center>
                             </form>
                         </td>
                     </tr>

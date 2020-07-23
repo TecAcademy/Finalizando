@@ -5,25 +5,14 @@ body{
 }
 .container{
     background-color: #343A40;
-    width: 550px;
+    width: 500px;
+    height: 900px;
 }
-
-.label-form{
-    height:25px ;
-    width:200px ;
-}
-.input-form{
-    height:40px ;
-    width:300px ;
-}
-.input-cargo{
+.radio{
     height: 20px;
     width: 20px;
 }
-.cargo-text{
-    font-size: 15px;
+.label{
+    font-size: 18px;
 }
-.radio{
-    width:50px;
-    height: 20px;
-}
+

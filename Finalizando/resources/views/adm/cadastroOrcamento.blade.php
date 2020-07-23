@@ -44,30 +44,43 @@
         <a class="navbar-brand">{{ session('nome') }}<br>{{ session('email') }}</a>
     </nav>
     <!--Fim navBar-->
-        <br>
-        <center><h3>Cadastro de mensalidade</h3></center>
-        <br>
-        <div class="container">
-            <form action="{{ route('adm.orcamento.cadastro.usuario') }}" method="post">
-                <h2>Complete o campo corretamente, em caso de erro apos o cadastro é possivel edita-lo</h2><br>
-                @csrf
-                @if($errors->all())
-                    @foreach($errors->all() as $error)
-                        <p> {{ $error }} </p>
-                    @endforeach
-                @endif
-
-               <center> <label class="label-form" type="input-form">Data do Vencimento</label>
+        <br><br>
+            <div class="container">
                 <br>
-                    <input class="input-form" type="date" name="vencimento" id="vencimento" required> <br><br>
-                <label class="label-form" type="input-form">Valor</label><br>
-                    <input class="input-form" type="number" name="preco" id="preco" step="any" min="0" max="4000" required>
-                <br><br>
-                <button class="btn btn-outline-primary btn-lg" type="submit">usuario</button>
-               </center>
-            </form>
-        </div>
-
+                <center><h1>Cadastro das mensalidade!</h1></center>
+                <br>
+                <center><img src="{{URL::asset('/images/usuario.png')}}" width="150" height="150"></center>
+                <div class="div-right">
+                    <form action="{{ route('adm.orcamento.cadastro.usuario') }}" method="post" class="needs-validation" novalidate>
+                        @csrf
+                        @if($errors->all())
+                            @foreach($errors->all() as $error)
+                                <div class="alert alert-danger" role="alert">
+                                   <center><strong><p> Data de pagamento <span style="color: red">Inválida</span></p></strong></center>
+                                </div>
+                            @endforeach
+                        @endif
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationTooltip01">Data do vencimento</label>
+                                <input type="date" class="form-control" id="validationTooltip01" name="vencimento" id="vencimento" required>
+                                <div class="valid-tooltip">
+                                   Certo!
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="validationTooltip02">Valor</label>
+                                <input type="number" class="form-control" name="preco" id="preco" step="any" min="0" max="4000" id="validationTooltip02" required>
+                                <div class="valid-tooltip">
+                                  Certo!
+                                </div>
+                            </div>
+                        </div>
+                        <br><br>
+                        <center><button class="btn btn-success btn-lg" type="submit">Selecionar usuario</button></center>
+                    </form>
+                </div>
+            </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -88,6 +101,26 @@
             today = yyyy+'-'+mm+'-'+dd;
             document.getElementById("vencimento").setAttribute("min", today);
         </script>
+            <script>
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function() {
+                    'use strict';
+                    window.addEventListener('load', function() {
+                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                        var forms = document.getElementsByClassName('needs-validation');
+                        // Loop over them and prevent submission
+                        var validation = Array.prototype.filter.call(forms, function(form) {
+                            form.addEventListener('submit', function(event) {
+                                if (form.checkValidity() === false) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
+                                form.classList.add('was-validated');
+                            }, false);
+                        });
+                    }, false);
+                })();
+            </script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

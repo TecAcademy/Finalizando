@@ -49,30 +49,30 @@
         <br>
     <table class="table table-hover table-dark">
         <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Area muscular</th>
-            <th>Aparelho</th>
-            <th>Letra</th>
-            <th>Editar Usuario</th>
-            <th>Excluir Usuario</th>
+            <th><center>ID</center></th>
+            <th><center>Nome do exercicio</center></th>
+            <th><center>Area Muscular</center></th>
+            <th><center>Aparelho</center></th>
+            <th><center>Letra</center></th>
+            <th><center>Editar</center></th>
+            <th><center>Excluir</center></th>
         </tr>
 
         @foreach($exercicios as $exercicio)
             <tr>
-                <td>{{ $exercicio->id }}</td>
-                <td>{{ $exercicio->nome }}</td>
-                <td>{{ $exercicio->areamuscular }}</td>
-                <td>{{ $exercicio->aparelho}}</td>
-                <td>{{ $exercicio->letra }}</td>
-                <td><a href="{{ route('adm.listar.edicao.exercicio', $exercicio->id) }}"><button class="btn btn-outline-success"><i class="fab fa-wpforms"></i></button></a></td>
+                <td><center>{{ $exercicio->id }}</center></td>
+                <td><center>{{ $exercicio->nome }}</center></td>
+                <td><center>{{ $exercicio->areamuscular }}</center></td>
+                <td><center>{{ $exercicio->aparelho}}</center></td>
+                <td><center>{{ $exercicio->letra }}</center></td>
+                <td><center><a href="{{ route('adm.listar.edicao.exercicio', $exercicio->id) }}"><button class="btn btn-outline-success"><i class="fab fa-wpforms"></i></button></a></center></td>
 
                 <td>
                     <form action="{{ route('adm.listar.exercicios.deletar') }}" method="post">
                         @csrf
                         @method('DELETE')
                         <input type="hidden" name="id" value="{{ $exercicio->id }}">
-                        <button class="btn btn-outline-success" type="submit"><i class="fas fa-trash"></i></button>
+                        <center><button class="btn btn-outline-success" type="submit"><i class="fas fa-trash"></i></button></center>
                     </form>
                 </td>
             </tr>
