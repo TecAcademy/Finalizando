@@ -48,9 +48,9 @@
                    </button>
                </div>
     @else
-       <br><br>
+
        <h3>
-        Aluno(a)
+        Do aluno(a)
         @foreach($obj as $sql)
             {{ $sql->nome }}
             @break
