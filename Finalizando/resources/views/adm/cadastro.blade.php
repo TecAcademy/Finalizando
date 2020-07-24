@@ -53,7 +53,6 @@
                     <input placeholder="Senha" type="password" name="password" id="password" required>
                 </div>
             </div>
-            <a href="#">Esqueceu sua senha ?</a>
             <button class="btn" type="submit">cadastrar</button>
         </form>
     </div>

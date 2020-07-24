@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('site/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/professor/MontarTreino.css') }}">
     <link rel="shortcut icon" href="{{ asset('images/logo.png') }}"  width="125" height="125">
-    <title>Monstar Treino do Aluno(a)</title>
+    <title>Monstar treino do aluno(a)</title>
 </head>
 <body>
     <!--start navBar-->
@@ -80,7 +80,11 @@
     </div>
     <br>
     <h5>
-        A duração desse treino sera valida até: <input  class="inputdate" type="date" name="dataTroca" id="dataTroca" required>
+        <center>
+            <div style="width: 400px; height: 100px" class="alert alert-primary" role="alert">
+               <strong>A duração desse treino sera valida até:</strong>  <input  class="inputdate" type="date" name="dataTroca" id="dataTroca" required>
+            </div>
+        </center>
         <button class="btn btn-success btn-lg" type="submit">Salvar</button>
     </h5>
     <br>

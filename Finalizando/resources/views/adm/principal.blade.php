@@ -59,10 +59,10 @@
         <div class="left">
             <center>
                   <br>
-                  <h1>Esse site é para você, dono de Academia quer ter um diferencial?!</h1><br>
+                  <h1>Esse site é para você, dono de Academia quer ter um diferencial!</h1><br>
                   <p class="texto">
-                        Vamos tornar sua experiencia cada vez melhor juntos!
-                        Nossa sitema tenta ajuda o maximo possível com o maior conforto
+                        Vamos tornar sua experiência cada vez melhor juntos!
+                        Nosso sistema tenta ajudar o máximo possível com o maior conforto
                         com um design simples e elegante para seu melhor desempenho. <br>
                         Um complemento para o seu negócio, e um destaque dentre os outros!
                         <br><br>

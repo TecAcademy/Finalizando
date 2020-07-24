@@ -56,7 +56,7 @@
                     Olá {{ session('nome') }}, navegando no nosso sitemas e possível observar que existem algumas opções,
                     você podera selecionar o aluno(a) desejado, de acordo com seu horario de trabalho dentro da academia,
                     assim tendo um melhor controle sobre seus alunos.<br>
-                    Também é possivel montar o treino dos alunos e auxilialos com observações em relação ao mesmo.
+                    Também é possivel montar o treino dos alunos e auxilia-los com observações em relação ao treino e as repetições.
                     <br><br>
                 <p class="dese">Desenvolvedores: Mathues Araújo & Eduardo Araújo &#169;</p>
 

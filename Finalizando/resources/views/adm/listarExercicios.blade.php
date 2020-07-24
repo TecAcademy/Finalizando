@@ -51,7 +51,7 @@
         <tr>
             <th><center>ID</center></th>
             <th><center>Nome do exercicio</center></th>
-            <th><center>Area Muscular</center></th>
+            <th><center>Área Muscular</center></th>
             <th><center>Aparelho</center></th>
             <th><center>Letra</center></th>
             <th><center>Editar</center></th>

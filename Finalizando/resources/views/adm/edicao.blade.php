@@ -109,10 +109,10 @@
                 </div>
             </div>
             <div class="check-box">
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-danger" role="alert"class="alert alert-warning alert-dismissible fade show" role="alert">
                 <strong>
                     <center>
-                        <h6>Caso não haja necessidade de alteração no nivel de acesso, simplesmente finalize ação</h6>
+                        <h6>Caso não haja necessidade de alteração no nivel de acesso, simplesmente finalize a ação.</h6>
                         <h2>Selecione com atenção!</h2>
                     <label class="check">Mudar cargo:</label>
                     @if($user->acesso == '2' )

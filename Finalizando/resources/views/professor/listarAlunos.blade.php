@@ -46,7 +46,7 @@
         <tr>
             <th><center>Nome</center></th>
             <th><center> E-mail</center> </th>
-            <th><center> Editar</center> </th>
+            <th><center> Montar treino</center> </th>
             <th><center> Visualizar treino do Aluno(a)</center></th>
         </tr>
         @foreach($alunos as $aluno)

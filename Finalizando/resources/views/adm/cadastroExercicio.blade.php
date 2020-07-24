@@ -61,7 +61,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label for="validationTooltip02">Area Muscular</label>
+                        <label for="validationTooltip02">Área Muscular</label>
                         <input type="text" class="form-control" id="validationTooltip02"  name="area" id="area"  placeholder="Exemplo:Peito"  required>
                         <div class="valid-tooltip">
                             Correto!
@@ -92,7 +92,7 @@
                     </div>
                 </div>
                 <br>
-                <center><button class="btn btn-success btn-lg" type="submit">Finalizar Operação</button></center>
+                <center><button class="btn btn-success btn-lg" type="submit">Finalizar operação</button></center>
             </form>
         </div>
     </div>

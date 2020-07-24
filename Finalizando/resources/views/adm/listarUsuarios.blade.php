@@ -42,9 +42,14 @@
     <a class="navbar-brand"><img src="{{URL::asset('/images/adm.png' )}}" width="60" height="60"></a>
     <a class="navbar-brand">{{ session('nome') }}<br>{{ session('email') }}</a>
 </nav>
+
 <!--Fim navBar-->
     @if(count($users) <= 1)
-        <h1>Nao há usuarios cadastrados</h1>
+       <center>
+           <div class="alert alert-primary" role="alert">
+            <h1>Não há usuarios cadastrados</h1>
+        </div>
+       </center>
     @else
         <br>
         <center><h3>Usuarios cadastrados</h3></center>

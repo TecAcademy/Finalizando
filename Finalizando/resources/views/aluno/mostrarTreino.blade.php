@@ -42,8 +42,8 @@
         <br>
             <table class="table table-hover table-dark" >
                 <tr>
-                    <th>Exercicio</th>
-                    <th>Area</th>
+                    <th>Exercício</th>
+                    <th>Área</th>
                     <th>Serie</th>
                     <th>Repetições</th>
                     <th>Intervalo (em segundos)</th>

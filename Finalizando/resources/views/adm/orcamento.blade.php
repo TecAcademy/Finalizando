@@ -46,7 +46,7 @@
     </nav>
     <!--Fim navBar-->
     <br><br>
-    <center><h1>Ações Possiveis!</h1></center>
+    <center><h1>Ações possíveis!</h1></center>
     <br><br><br>
         <div class="container">
             <div class="container">
