@@ -21,8 +21,8 @@ class CreateTrainingHasExercisesTable extends Migration
             $table->integer('repeticao');
             $table->integer('intervalo');
             $table->text('obs');
-            $table->foreign('idexercicio')->references('id')->on('physicalexercises')->onDelete('cascade');
             $table->foreign('idficha')->references('id')->on('trainingsheets')->onDelete('cascade');
+            $table->foreign('idexercicio')->references('id')->on('physicalexercises')->onDelete('cascade');
             $table->timestamps();
         });
     }

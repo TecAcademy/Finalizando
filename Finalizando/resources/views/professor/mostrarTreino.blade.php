@@ -38,16 +38,18 @@
     </nav>
     <br>
     <!--Fim navBar-->
-   <center><h2>Ficha de treino</h2>
+    <center><h2>Ficha de treino</h2></center>
+       <center><br>
     @if(count($obj) <= 0)
-         <center>
-            <div class="alert alert-primary" role="alert">
-                <h1>É preciso que o professor monte seu treino</h1>
-           </div>
-         </center>
+               <div style="height: 3@method(); width: 600px" class="alert alert-danger alert-dismissible fade show" role="alert">
+                   <strong><h1>Voce ainda não montou um treino para este aluno deseja montar um agora!?</h1></strong>
+                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button>
+               </div>
     @else
-           <br>
-        <h3>
+       <br><br>
+       <h3>
         Aluno(a)
         @foreach($obj as $sql)
             {{ $sql->nome }}
