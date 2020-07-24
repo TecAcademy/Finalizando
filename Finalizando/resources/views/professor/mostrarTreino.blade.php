@@ -38,11 +38,15 @@
     </nav>
     <br>
     <!--Fim navBar-->
-   <center><h2>Ficha de treino</h2></center>
+   <center><h2>Ficha de treino</h2>
     @if(count($obj) <= 0)
-        <p>É preciso que o professor monte seu treino</p>
+         <center>
+            <div class="alert alert-primary" role="alert">
+                <h1>É preciso que o professor monte seu treino</h1>
+           </div>
+         </center>
     @else
-    </center>
+           <br>
         <h3>
         Aluno(a)
         @foreach($obj as $sql)
@@ -51,23 +55,25 @@
         @endforeach
     </center>
     </h3>
+    <br>
+        <div class="container"><br>
     <table class="table table-hover table-dark">
         <tr>
-            <th>Exercicio</th>
-            <th>Area</th>
-            <th>Serie</th>
-            <th>Repeticao</th>
-            <th>Intervalo (em segundos)</th>
-            <th>Obs</th>
+            <th><center>Exercicio</center></th>
+            <th><center>Area</center></th>
+            <th><center>Serie</center></th>
+            <th><center>Repetição</center></th>
+            <th><center>Intervalo (em segundos)</center></th>
+            <th><center>Obs</center></th>
         </tr>
         @foreach($obj as $sql)
             <tr>
-                <td>{{ $sql->exercicio }}</td>
-                <td>{{ $sql->areamuscular }}</td>
-                <td>{{ $sql->serie }}</td>
-                <td>{{ $sql->repeticao }}</td>
-                <td>{{ $sql->intervalo }}</td>
-                <td>{{ $sql->obs }}</td>
+                <td><center>{{ $sql->exercicio }}</center></td>
+                <td><center>{{ $sql->areamuscular }}</center></td>
+                <td><center>{{ $sql->serie }}</center></td>
+                <td><center>{{ $sql->repeticao }}</center></td>
+                <td><center>{{ $sql->intervalo }}</center></td>
+                <td><center>{{ $sql->obs }}</center></td>
             </tr>
         @endforeach
         </table>
@@ -79,7 +85,7 @@
         @endif
     @endforeach </span></center>
     <br>
-
+        </div>
     <script src="{{ asset('site/bootstrap.js') }}"></script>
     <script src="{{ asset('site/jquery.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

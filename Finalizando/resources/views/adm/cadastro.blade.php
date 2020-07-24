@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Seja Bem Vindo Administrador(a)</title>
+    <title>Seja Bem Vindo administrador(a)</title>
     <link href="{{ asset('css/adm/LoginAdm.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
@@ -19,7 +19,7 @@
     <div class="login-content">
         <form action="{{ route('adm.cadastro.realizar') }}" method="post">
             @csrf
-            <h1>Olá seja bem-vindo Adiminstrador!</h1>
+            <h1>Olá seja bem-vindo administrador!</h1>
 
             @if(session()->has('error'))
                 <div class="alert alert-warning">

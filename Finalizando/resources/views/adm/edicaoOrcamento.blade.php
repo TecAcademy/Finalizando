@@ -68,7 +68,7 @@
                 <label class="label-form"></label>
                 <input class="input-form" type="hidden" name="velhopreco" value="{{ $dados->preco }}"><br><br>
 
-                <button class="btn btn-outline-primary btn-lg" type="submit">Efetuar edicao</button>
+                <button class="btn btn-outline-primary btn-lg" type="submit">Efetuar edição</button>
         </form>
     </center>
         <br>

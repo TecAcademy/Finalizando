@@ -118,15 +118,15 @@
                     @if($user->acesso == '2' )
                         <input type="radio" name="acesso" id="acesso" value="0"> <label class="check">Aluno</label>
                         <input type="radio" name="acesso" id="acesso" value="1"><label class="check">Professor</label>
-                        <input type="radio" name="acesso" id="acesso" value="2" checked><label class="check">Adimistrador</label>
+                        <input type="radio" name="acesso" id="acesso" value="2" checked><label class="check">Administrador</label>
                     @elseif($user->acesso == '1' )
                         <input type="radio" name="acesso" id="acesso" value="0"><label class="check">Aluno</label>
                         <input type="radio" name="acesso" id="acesso" value="1" checked><label class="check">Professor</label>
-                        <input type="radio" name="acesso" id="acesso" value="2"><label class="check">Adimistrador</label>
+                        <input type="radio" name="acesso" id="acesso" value="2"><label class="check">Administrador</label>
                     @else
                         <input type="radio" name="acesso" id="acesso" value="0"checked><label class="check">Aluno</label>
                         <input type="radio" name="acesso" id="acesso" value="1"><label class="check">Professor</label>
-                        <input type="radio" name="acesso" id="acesso" value="2"><label class="check">Adimistrador</label>
+                        <input type="radio" name="acesso" id="acesso" value="2"><label class="check">Administrador</label>
                     @endif
                 </strong></center>
                 </div>

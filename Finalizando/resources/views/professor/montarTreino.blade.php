@@ -42,7 +42,9 @@
     @if($errors->all())
         <div>
             @foreach($errors->all() as $error)
-                <h5>{{$error}}</h5>
+              <center>
+                    <h5>{{$error}}</h5>
+              </center>
             @endforeach
         </div>
     @endif
@@ -51,12 +53,12 @@
         <br>
         <table class="table table-hover table-dark">
             <tr>
-                <th>Nome</th>
-                <th>Marcar</th>
-                <th>Serie</th>
-                <th>Repetição</th>
-                <th>Intervalo (em segundos)</th>
-                <th>Observações</th>
+                <th><center>Nome</center></th>
+                <th><center>Marcar</center></th>
+                <th><center>Serie</center></th>
+                <th><center>Repetição</center></th>
+                <th><center>Intervalo (em segundos)</center></th>
+                <th><center>Observações</center></th>
             </tr>
             <form action="{{ route('prof.homepage.montarTreino.realizar') }}" method="post">
                 @csrf
@@ -88,10 +90,21 @@
     </center>
     <br><br>
     </form>
+    <script>
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+        if(dd<10){
+            dd='0'+dd
+        }
+        if(mm<10){
+            mm='0'+mm
+        }
 
-
-
-
+        today = yyyy+'-'+mm+'-'+dd;
+        document.getElementById("vencimento").setAttribute("min", today);
+    </script>
     <script src="{{ asset('site/bootstrap.js') }}"></script>
     <script src="{{ asset('site/jquery.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

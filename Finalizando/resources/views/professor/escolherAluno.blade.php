@@ -44,23 +44,23 @@
         <br>
     <table class="table table-hover table-dark">
         <tr>
-            <th> Nome do aluno </th>
-            <th> Email </th>
-            <th> Selecione </th>
+            <th><center> Nome do aluno </center></th>
+            <th><center> Email </center></th>
+            <th> <center>Selecione</center> </th>
         </tr>
         @foreach($users as $user)
 
             @if($user->nome != session('nome') && $user->acesso == '0')
 
                 <tr>
-                    <td>{{ $user->nome }}</td>
-                    <td>{{ $user->email }}</td>
+                    <td><center>{{ $user->nome }}</center></td>
+                    <td><center>{{ $user->email }}</center></td>
                     <td>
                         <form action="{{ route('prof.homepage.escolherAluno.realizar') }}" method="post">
                             @csrf
-                            <input type="hidden" name="id" id="id" value="{{ $user->id }}">
-                            <input type="hidden" name="treinador" id="treinador" value="{{ session('nome') }}">
-                            <button class="btn btn-outline-success" type="submit">Mover para Listar Aluno(a)</button>
+                            <center> <input type="hidden" name="id" id="id" value="{{ $user->id }}"></center>
+                            <center><input type="hidden" name="treinador" id="treinador" value="{{ session('nome') }}"></center>
+                            <center> <button class="btn btn-outline-success" type="submit">Mover para Listar Aluno(a)</button></center>
                         </form>
                     </td>
                 </tr>

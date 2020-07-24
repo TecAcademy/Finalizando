@@ -54,7 +54,7 @@
             <th><center>E-mail</center></th>
             <th><center>Valor</center></th>
             <th><center>Data do pagamento</center></th>
-            <th><center>Vencimento Mensalidade</center></th>
+            <th><center>Vencimento mensalidade</center></th>
             <th><center>Situação</center></th>
             <th><center>Excluir</center></th>
         </tr>

@@ -44,18 +44,18 @@
         <br>
     <table class="table table-hover table-dark">
         <tr>
-            <th> Nome </th>
-            <th> E-mail </th>
-            <th> Editar </th>
-            <th> Visualizar treino do Aluno(a)</th>
+            <th><center>Nome</center></th>
+            <th><center> E-mail</center> </th>
+            <th><center> Editar</center> </th>
+            <th><center> Visualizar treino do Aluno(a)</center></th>
         </tr>
         @foreach($alunos as $aluno)
 
             <tr>
-                <td>{{ $aluno->nome }}</td>
-                <td>{{ $aluno->email }}</td>
-                <td><a href="{{ route('prof.homepage.montarTreino', $aluno->id) }}"><button class=" btn btn-outline-success"><i class="fab fa-wpforms"></i></button></a></td>
-                <td><a href="{{ route('prof.homepage.mostrarTreino', $aluno->id) }}"><button class="btn btn-outline-success"><i class="far fa-eye"></i></button></a></td>
+                <td><center>{{ $aluno->nome }}</center></td>
+                <td><center>{{ $aluno->email }}</center></td>
+                <td><center><a href="{{ route('prof.homepage.montarTreino', $aluno->id) }}"><button class=" btn btn-outline-success"><i class="fab fa-wpforms"></i></button></a></center></td>
+                <td><center><a href="{{ route('prof.homepage.mostrarTreino', $aluno->id) }}"><button class="btn btn-outline-success"><i class="far fa-eye"></i></button></a></center></td>
             </tr>
         @endforeach
     </table>
