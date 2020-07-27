@@ -58,7 +58,7 @@
                     assim tendo um melhor controle sobre seus alunos.<br>
                     Também é possivel montar o treino dos alunos e auxilia-los com observações em relação ao treino e as repetições.
                     <br><br>
-                <p class="dese">Desenvolvedores: Mathues Araújo & Eduardo Araújo &#169;</p>
+                <p class="dese">Desenvolvedores: Matheus Araújo & Eduardo Araújo &#169;</p>
 
 
                 </p>

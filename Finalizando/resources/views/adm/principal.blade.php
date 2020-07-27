@@ -66,7 +66,7 @@
                         com um design simples e elegante para seu melhor desempenho. <br>
                         Um complemento para o seu negócio, e um destaque dentre os outros!
                         <br><br>
-                            <p class="dese">Desenvolvedores: Mathues Araújo & Eduardo Araújo &#169;</p>
+                            <p class="dese">Desenvolvedores: Matheus Araújo & Eduardo Araújo &#169;</p>
 
 
                   </p>

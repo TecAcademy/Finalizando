@@ -56,7 +56,7 @@
                     o mesmo para que posso requisitar a troca.<br>
                     Seus Treino serão lançados e atualizados por aqui, seu treino será mudado com o passar do tempo
                     <br><br>
-                <p class="dese">Desenvolvedores: Mathues Araújo & Eduardo Araújo &#169;</p>
+                <p class="dese">Desenvolvedores: Matheus Araújo & Eduardo Araújo &#169;</p>
 
 
                 </p>
