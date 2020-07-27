@@ -43,7 +43,7 @@
         <div>
             @foreach($errors->all() as $error)
               <center>
-                    <h5>{{$error}}</h5>
+                  <span style="color:red;"><h5>{{$error}}</h5></span>
               </center>
             @endforeach
         </div>

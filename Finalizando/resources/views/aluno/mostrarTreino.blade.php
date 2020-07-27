@@ -35,7 +35,7 @@
     </nav>
 
     <br>
-    <center><h3>Olá <span style="color:blue;">{{ session('nome') }}</span>, vamos iniciar o seu treino! </h3></center>
+    <center><h3>Olá <span style="color:#55efc4;">{{ session('nome') }}</span>, vamos iniciar o seu treino! </h3></center>
     <!--Fim <navBar-->
     <br>
     <div class="container">
