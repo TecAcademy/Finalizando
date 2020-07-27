@@ -14,7 +14,7 @@
 <img class="wave" src="{{URL::asset('/images/backloginadm.png')}}">
 <div class="container">
     <div class="img">
-        <h1 style="color:#14ffe9;">Tec Academy</h1><p style="color:#14ffe9;">&copy;
+        <h1 style="color:#55efc4;">Tec Academy</h1><p style="color:#14ffe9;">&copy;
     </div>
     <div class="login-content">
         <form action="{{ route('adm.cadastro.realizar') }}" method="post">
